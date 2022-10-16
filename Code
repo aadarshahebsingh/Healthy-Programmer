@@ -45,7 +45,7 @@ while True:
         print("Water Drinkig time.Enter WaterDone to stop the alarm= ")
         music("X2Download.app - लॉलीपॉप लागेलू - Pawan Singh Superhit Bhojpuri Song - Lollypop Lagelu - Hit Bhojpuri Video Song (128 kbps).mp3","WaterDone")
         water = time()
-        log("Water Drnak at  ")
+        log("Water Drank at  ")
 
 
     if time()-phy>phytime:
