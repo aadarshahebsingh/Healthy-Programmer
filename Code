@@ -1,0 +1,56 @@
+name=input("Enter you name sir= ")
+print(f"Hello {name}!  Good morning, Welcome to Office, Hoping you doing well. ")
+print("This program helps you to maintian your health with doing your work. Let's get started.")
+from pygame import mixer
+from datetime import datetime
+from time import time
+
+def music(file,stopper):
+    mixer.init()
+    mixer.music.load(file)
+    mixer.music.play()
+
+    while True:
+        a=input()
+        if a==stopper:
+            mixer.music.stop()
+            break
+
+# if __name__=="__main__":
+
+def log(msg):
+    with open("Healthy_Programmer2.txt","a") as healthy:
+        healthy.write(f"{msg} {datetime.now()}\n")
+
+eye_time=time()
+water=time()
+phy=time()
+
+
+eyetime=30*60
+watertime=40*60
+phytime=45*60
+
+while True:
+
+
+
+    if time()-eye_time>eyetime:
+        print("Eye excercise time.Enter Eyedone to stop the alarm= ")
+        music("X2Download.app - Charlie Puth - _How Long_ [Official Video] (128 kbps).mp3","Eyedone")
+        eye_time = time()
+        log("Eye Excercise done at  ")
+
+    if time()-water>watertime:
+        print("Water Drinkig time.Enter WaterDone to stop the alarm= ")
+        music("X2Download.app - लॉलीपॉप लागेलू - Pawan Singh Superhit Bhojpuri Song - Lollypop Lagelu - Hit Bhojpuri Video Song (128 kbps).mp3","WaterDone")
+        water = time()
+        log("Water Drnak at  ")
+
+
+    if time()-phy>phytime:
+        print("Physical Excercise time. Enter Phydone to stop the alarm= ")
+        music("X2Download.app - Tuhi Meri Shab Hai [Full Song] Gangster- A Love Story (128 kbps).mp3","Phydone")
+        phy = time()
+        log("Physical Excercise done at  ")
+
